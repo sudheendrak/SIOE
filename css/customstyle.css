@@ -38,18 +38,21 @@ img {
   margin:0;
   background-size:cover;
   background-position: 25% 25%;
-  background-image: linear-gradient(rgba(60,60,60,60),rgba(200,200,200,11));
+  background-image: linear-gradient(rgba(209, 209, 150, 0.6),rgba(240,150,200,0.2));
   padding-top:20px;
+  border-radius: 20px;
   padding-bottom:20px;
   /*padding-left:0px;
   padding-right:0px;*/
   background-clip: content-box;
 }
-
+.carousel-inner .item img{
+  height:400px;
+}
 .content {
-  margin-left:20%;
+  margin-left:2%;
   margin-top:-20px;
-  margin-right:20%;
+  margin-right:2%;
   border-top:2px outset #00aaffaa;
   border-bottom:2px outset #00aaffaa;
   border-left:12px solid #064768ab;
@@ -75,6 +78,7 @@ img {
   font-weight:bold; 
   padding:4px;
 }
+/*
 div.content > h2 {
   background-size:cover;
   background-color:#06476833;
@@ -82,4 +86,8 @@ div.content > h2 {
 div.content > p {
   background-size:cover;
   background-color:#06476833;
+}*/
+
+.carousel-caption{
+  color:blue;
 }

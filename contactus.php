@@ -132,6 +132,51 @@
     
                     <div class="col-md-6 col-sm-6 wow fadeInRight">
                         <div class="contact-form">
+                            <?php
+                                if (!empty($_POST)) {
+                                    $from = $_POST['email'];
+                                    //$sendTo = 'info@industry-oriented-engineering.com';
+                                    $sendTo = 'sudheendra.kalgar@gmail.com';
+                                    $subject = 'New message from contact form';
+                                    $fields = array('name' => 'name', 'phone' => 'phone', 'email' => 'email', 'message' => 'message'); // array variable name => Text to appear in email
+                                    $okMessage = '<p class="text-success">Contact form successfully submitted. Thank you,</br> I will get back to you soon!</br><a href="../index.php">Home</a></p>';
+                                    $errorMessage = '<p class="text-danger">There was an error while submitting the form. Please try again later</p>';
+
+                                    // let's do the sending
+
+                                    try
+                                    {
+                                        $emailText = "You have new message from contact form\n=============================\n";
+
+                                        foreach ($_POST as $key => $value) {
+
+                                            if (isset($fields[$key])) {
+                                                $emailText .= "$fields[$key]: $value\n";
+                                            }
+                                        }
+
+                                        mail($sendTo, $subject, $emailText, "From: " . $from);
+
+                                        $responseArray = array('type' => 'success', 'message' => $okMessage);
+                                    }
+                                    catch (\Exception $e)
+                                    {
+                                        $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+                                    }
+
+                                    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+                                        $encoded = json_encode($responseArray);
+                                        
+                                        header('Content-Type: application/json');
+                                        
+                                        echo $encoded;
+                                    } else {
+                                        echo $responseArray['message'];
+										//echo $emailText;
+                                    }
+                                } else 
+                                    {
+                                    ?>
                             <form class="contact-box" method="post" action="contactus.php">
                                 <div class="form-group">
                                     <label>Name*</label>
@@ -155,6 +200,9 @@
                                     <input type="submit" class="btn btn-success btn-send" value="Send message">
                                 </div>
                             </form>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -169,7 +217,7 @@
 
                             <script>
                             var chatbox = document.getElementById('fb-customer-chat');
-                            chatbox.setAttribute("page_id", "1564307877018177");
+                            chatbox.setAttribute("page_id", "1508399602754942");
                             chatbox.setAttribute("attribution", "biz_inbox");
                             window.fbAsyncInit = function() {
                                 FB.init({
@@ -187,76 +235,50 @@
                             }(document, 'script', 'facebook-jssdk'));
                             </script>
         </div>
+        <!--<div class="row">
+            <div class="box text-justify">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        TEST
+                    </h2>
+                    <hr>
+                    <hr class="visible-xs">
+                    <div class="col-lg-12 text-center">
+                    </div>
+            </div>
+        </div> -->
         <div>
             <!--Add the following script at the bottom of the web page (before </body></html>)-->
             <script type="text/javascript">function add_chatinline(){var hccid=42405718;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
                 add_chatinline();</script>
-        </div><!--
+        </div>
         <div class="needhelp">
-            <a class="fa fa-envelope" data-toggle="modal" data-target="#subscribemodal" role="button">
-                Subscribe
-            </a>
-            
-        </div>-->
-
-            <!-- Modal for Subscribe button
-            <div class="modal " id="subscribemodal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                     
-                    <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Subscribe</h4>
-                            </div>
-                            <div class="modal-body">
-                            <div class="subscribe">
-                                    <h5>Get email updates</h5>
-                                    <h6>Receive all the latest news and schedule updates direct to your inbox. </h6>
-                                    <h6>We won't spam you.</h6>
-                                    <form id="fupForm" name="subscribe_form" method="post">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email Address" name="email">
-                                        </div>
-                                        <input type="button"  name="subscribe" class="btn btn-primary" value="Subscribe" id="subscribe">
-                                    </form>
-                                    <div id="success" class="success fadeOut"></div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                    </div>
+            <a class="fa fa-envelope fa-3x" data-toggle="collapse" href="#floatSocial" role="button" aria-expanded="true" aria-controls="collapseExample">
+                
+              </a>
+              <div class="collapse animated slideInLeft" id="floatSocial">
+                <div class="floatSocial">
+                    <ul class="socail-link list-inline">
+                        <li><a target="_blank" href="https://www.linkedin.com/company/a-school-of-industry-oriented-engineering-and-solutions/"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCd9VCqzlUJku6JlOSBTEoXw/"><i class="fa fa-youtube-square fa-2x"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/aSchoolofIndustryOrientedEngineering/"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/industry_oriented_engineering/"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    </ul>
                 </div>
-            </div>-->
+              </div>
+        </div>
         <footer>
         <div class="container">
             <div class="row rollOut">
-                <div class="col-md-12 col-sm-12">
-                    <div class="subscribe col-md-6 col-sm-6">
-                        <h5>Get email updates</h5>
-                        <h6>Receive all the latest news and schedule updates direct to your inbox.</h6>
-                        <h6>We won't spam you.</h6>
-                        <form id="fupForm" name="subscribe_form" method="post">
-                            <div class="form-group col-md-6 col-sm-6">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email Address" name="email">
-                            </div>
-                            <input type="button"  name="subscribe" class="col-md-2 col-sm-2 btn btn-primary" value="Subscribe" id="subscribe">
-                        </form>
-                        <div id="success" class="success fadeOut"></div>
-                    </div>
-                    <div class=" col-md-6 col-sm-6">
-                        <h5>Follow Us on:</h5>
-                        <ul class="socail-link list-inline">
-                            <li><a target="_blank" href="https://www.linkedin.com/company/a-school-of-industry-oriented-engineering-and-solutions/"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
-                            <li><a target="_blank" href="https://www.youtube.com/channel/UCd9VCqzlUJku6JlOSBTEoXw/"><i class="fa fa-youtube-square fa-3x"></i></a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/aSchoolofIndustryOrientedEngineering/"><i class="fa fa-facebook-official fa-3x"></i></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/industry_oriented_engineering/"><i class="fa fa-instagram fa-3x"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 text-center">
-                    <div class="">Copyright &copy;2021 - All Rights Reserved - a School of Industry Oriented Engineering & Solutions</div>
-                    <div class="">Developed By <a target="_blank" href="http://services.naagandige.net/" title="Web Services">Anagatha</a> </div>
+                <div class="col-lg-12 text-center">
+                    <div class="copyright">Copyright &copy; - All Rights Reserved - a School of Industry Oriented Engineering & Solutions</div>
+                    <ul class="socail-link list-inline">
+                        <li><a target="_blank" href="https://www.linkedin.com/company/a-school-of-industry-oriented-engineering-and-solutions/"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCd9VCqzlUJku6JlOSBTEoXw/"><i class="fa fa-youtube-square fa-3x"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/aSchoolofIndustryOrientedEngineering/"><i class="fa fa-facebook-official fa-3x"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/industry_oriented_engineering/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                    </ul>
+                    <div class="fl_right">Developed By <a target="_blank" href="http://services.naagandige.net/" title="Web Services">Anagatha</a> </div>
                 </div>
             </div>
         </div>
@@ -270,7 +292,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Google Map API Key Source -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6IwHbJcghcb3qAw3tHaNJnaKz-W0nHnM&callback=initMap"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD6IwHbJcghcb3qAw3tHaNJnaKz-W0nHnM&callback=initMap"></script>
     <script src="js/googlemapsapi.js"></script>
     <script type="application/ld+json">
     {
@@ -292,10 +314,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-113860701-1');
-  
 </script>
-<script src="js/subscribe.js"></script>
-
 </body>
 
 </html>

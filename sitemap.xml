@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>//www.industry-oriented-engineering.com/newsite2/index.html</loc>
-      <priority>1</priority>
-   </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.industry-oriented-engineering.com/</loc>
+  <lastmod>2021-07-01T05:46:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/index.php</loc>
+  <lastmod>2021-07-01T05:46:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/aboutus.html</loc>
+  <lastmod>2021-06-29T09:39:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/offerings.html</loc>
+  <lastmod>2021-06-29T09:39:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/benefits.html</loc>
+  <lastmod>2021-06-29T09:39:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/testimonial.php</loc>
+  <lastmod>2021-07-01T05:46:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/contact.html</loc>
+  <lastmod>2021-06-29T09:43:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/images/offering/Course_for_Core_Design_Engineering.pdf</loc>
+  <lastmod>2021-06-26T05:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.industry-oriented-engineering.com/images/offering/Course_for_Technical_Profile_Building_for_MSAbroad.pdf</loc>
+  <lastmod>2021-06-26T05:57:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>

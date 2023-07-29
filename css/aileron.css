@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'AileronBlack';
+        src: url('../fonts/aileron/AileronBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronBlackItalic';
+        src: url('../fonts/aileron//AileronBlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronBold';
+        src: url('../fonts/aileron/AileronBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronBoldItalic';
+        src: url('../fonts/aileron/AileronBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronHeavy';
+        src: url('../fonts/aileron/AileronHeavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronHeavyItalic';
+        src: url('../fonts/aileron//228d417e0db435154d215260c8c42735/AileronHeavyItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronItalic';
+        src: url('../fonts/aileron/AileronItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronLight';
+        src: url('../fonts/aileron//7120f405f94a79633cb8671daf076264/AileronLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronLightItalic';
+        src: url('../fonts/aileron//5c532e35bb87bd460beccea387ada6fe/AileronLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronRegular';
+        src: url('../fonts/aileron/AileronRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronSemiBold';
+        src: url('../fonts/aileron/AileronSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronSemiBoldItalic';
+        src: url('../fonts/aileron/AileronSemiBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronThin';
+        src: url('../fonts/aileron/AileronThin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronThinItalic';
+        src: url('../fonts/aileron/AileronThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'AileronUltraLight';
+        src: url('../fonts/aileron/AileronUltraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'AileronUltraLightItalic';
+        src: url('../fonts/aileron/AileronUltraLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+ /* The following rules are deprecated. */ 
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronBlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronHeavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronHeavyItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronSemiBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronThin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronUltraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Aileron';
+        src: url('../fonts/aileron/AileronUltraLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
